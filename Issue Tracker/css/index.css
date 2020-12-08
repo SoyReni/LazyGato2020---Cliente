@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,200;1,300;1,400;1,700&display=swap');
+* {
+	box-sizing: border-box;
+	font-family: 'Jost', sans-serif;
+    margin: 0px;
+    background: #ffffff;
+}
+body{
+	min-height: 100vh;
+  	position: relative;
+  	padding-bottom: 100px; 
+}
+.barra{
+	margin: -10px;
+	margin-bottom: 0;
+	padding: 2%; 
+}
+.logo{
+	position: relative;
+    background: url(img/logo.png) no-repeat;
+    width: 300px;
+    left: 15px;
+    background-size: contain;
+}
+.inicio, .registro{
+	padding: 10px;
+	margin-bottom: -10px;
+	margin-top: 10px;
+}
+.inicio p{
+	font-size: 1.3em;
+	background: #DADADA;
+	border-radius: 10px;
+	padding: 10px;	
+}
+.inicio p:hover{
+	background: #878787;
+}
+.registro p{
+	font-size: 1.3em;
+	background: #E30613;
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+}
+.registro p:hover{
+	background: #BE1622;
+}
+.home{
+	font-size: 3em;
+	font-weight: 600;
+}
+.bienvenido{
+	margin-top: 1%;
+	margin-bottom: 0;
+}
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+  }
+nav, .vacio, .logo, .barra, .inicio, .registro, footer, footer div, footer span{
+	background: #EDEDED;
+}

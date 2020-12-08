@@ -12,7 +12,6 @@ class Tablero extends Component {
         this.setState(() =>{
             return {botonSeleccionado: boton.id}
         });
-        console.log(this.state.botonSeleccionado);
         var selected = boton.id;
         this.props.onUpdatePantalla(selected);
     }
@@ -30,5 +29,4 @@ class Tablero extends Component {
         );
     }
 }
-
 export default Tablero;

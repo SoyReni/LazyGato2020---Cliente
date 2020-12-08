@@ -17,10 +17,14 @@ class App extends Component{
   
   updatePantalla = (valor) => {
     if (valor === '='){
-      var result = eval(this.state.mprincipal).toString();
-      this.setState({mprincipal: result});
-      var igual = this.state.msecundario + ' !! ' + this.state.mprincipal;
-      this.setState({msecundario: igual});
+      try{
+        var result = eval(this.state.mprincipal).toString();
+        this.setState({mprincipal: result});
+        var igual = this.state.msecundario + ' | ' + result + '=' + this.state.mprincipal;
+        this.setState({msecundario: igual});
+      } catch (error){
+        this.setState({mprincipal: ''})
+      }
     } else if (valor === 'C'){
       this.setState({mprincipal: ''});
       this.setState({msecundario: ''});
@@ -39,9 +43,11 @@ class App extends Component{
   return (
     <div className='contenedor'>
       <header>Calculadora</header>
-      <Pantalla principal = {this.state.mprincipal} secundario = {this.state.msecundario}/>
-      <Tablero botones = {this.state.botones} onUpdatePantalla={this.updatePantalla}/>
-      <footer>Sebastian Caballero</footer>
+      <div className="sep">
+        <Pantalla principal = {this.state.mprincipal} secundario = {this.state.msecundario}/>
+        <Tablero botones = {this.state.botones} onUpdatePantalla={this.updatePantalla}/>
+      </div>
+      <footer><em>Sebastian Caballero 2020</em></footer>
     </div>
   );
   }

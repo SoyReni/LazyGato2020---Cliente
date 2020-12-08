@@ -68,7 +68,7 @@ export const BOTONES = [
         tipo: 'boton numero cero'
     },
     {
-        id: ',',
+        id: '.',
         tipo: 'boton numero'
     },
     {
